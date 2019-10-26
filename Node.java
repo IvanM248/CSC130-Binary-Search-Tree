@@ -62,12 +62,14 @@ public class Node {
       return this;
    }
    
+   //Recursively return the min value starting at a specified node
    public int getMinData() {
-      Node current = this;
-      while(current.left != null) {
-         current = current.left;
+      if(this.left == null) {
+         return this.data;
       }
-      return current.data;
+      else {
+         return this.left.getMinData();
+      }
    }
    
    public void clear() {
