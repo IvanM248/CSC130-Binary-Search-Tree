@@ -2,6 +2,7 @@
 //CSC130
 //Assignment 3
 public class BinarySearchTree {
+
    private Node root;
    
    public void clear(){
@@ -42,23 +43,19 @@ public class BinarySearchTree {
       }
    }
    
+   //Infix traversal.
    public void printValues() {
       
       if(root != null)
          root.printValues();
    }
    
+   //Prefix traversal.
    public void printTree() {
       
       if(root != null)
-         //Start indent with 0.
+         //Indent begins with 0.
          root.printTree(0);
-   }
-   
-   public void printTreeSideWays() {
-      if(root != null) {
-         root.printTreeSideWays(0);
-      }
    }
    
    public String about(){

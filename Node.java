@@ -20,6 +20,7 @@ public class Node {
    }
    
    public Node remove(int value) {
+   
       if(value < this.data) {
          this.left = this.left.remove(value);
       }
@@ -51,6 +52,7 @@ public class Node {
    
    //Removes smallest value node from the bst recursively.
    public Node removeMin() {
+   
       if(this.left == null) {
          //Once min node is reached, return its right node as everything to
          //the right of this node is greater than this node.
@@ -64,6 +66,7 @@ public class Node {
    
    //Recursively return the min value starting at a specified node
    public int getMinData() {
+   
       if(this.left == null) {
          return this.data;
       }
@@ -73,6 +76,7 @@ public class Node {
    }
    
    public void clear() {
+   
       //Post-Order traversal.
       if(this.left != null) {
          //visit left subtree.
@@ -89,6 +93,7 @@ public class Node {
    }
      
    public boolean contains(int value) {
+   
       if(value > this.data && this.right != null){
          return this.right.contains(value);
       }
@@ -152,20 +157,4 @@ public class Node {
          right.printTree(indent+1);
       }
    }
-   
-   public void printTreeSideWays(int level) {
-      if(this.right != null) {
-         this.right.printTreeSideWays(level+1);
-      }
-      
-      for(int i = 0; i < level; i++) {
-         System.out.print("  ");
-      }
-      System.out.println(this.data);
-            
-      if(this.left != null) {
-         this.left.printTreeSideWays(level+1);        
-      }
-   
-   } 
 }
