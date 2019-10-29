@@ -7,11 +7,6 @@ public class Node {
    public Node left;
    public Node right;
    
-   public Node() {
-   
-      this(0, null, null);
-   }
-   
    public Node(int data, Node left, Node right) {
    
       this.data = data;
