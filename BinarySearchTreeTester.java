@@ -3,6 +3,7 @@ public class BinarySearchTreeTester{
       BinarySearchTree tree = new BinarySearchTree();
       int[] arr = {6,3,8,1,5,7,9,0,2,4};
       
+      System.out.println("Adding values to BST: ");
       //Add values to BST.
       for(int i = 0; i < arr.length; i++){
          tree.add(arr[i]);
@@ -10,6 +11,10 @@ public class BinarySearchTreeTester{
       
       tree.printTree();
       System.out.println();
+      tree.remove(10);
+      
+      System.out.println("\n\n");
+      tree.printTree();
       
       //Check contains method functionality
       for(int i = 0; i < 15; i++) {
@@ -39,6 +44,10 @@ public class BinarySearchTreeTester{
       
       System.out.println("\n\nRemove the root:");
       tree.remove(6);
+      tree.printTree();
+      
+      System.out.println("\n\nRemoving a node that does not exist (10): ");
+      tree.remove(10);
       tree.printTree();
       
       //Check clear method fucntionality
