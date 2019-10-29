@@ -1,29 +1,47 @@
 public class BinarySearchTreeTester{
    public static void main(String[] args){
       BinarySearchTree tree = new BinarySearchTree();
-      tree.add(6);
-      tree.add(3);
-      tree.add(8);
-      tree.add(1);
-      tree.add(5);
-      tree.add(7);
-      tree.add(9);
-      tree.add(0);
-      tree.add(2);
-      tree.add(4);
-      tree.printTreeSideWays();
-      System.out.println("\n\n");
-      tree.remove(0);
-      tree.remove(1);
-      tree.remove(6);
+      int[] arr = {6,3,8,1,5,7,9,0,2,4};
+      
+      //Add items to BST.
+      for(int i = 0; i < arr.length; i++){
+         tree.add(arr[i]);
+      }
+      
+      tree.printTree();
+      System.out.println();
+      
+      //Check contains method functionality
+      for(int i = 0; i < 15; i++) {
+         System.out.println("Tree contains " +i +": " +tree.contains(i));
+      }
+      
+      System.out.println("\nRemove a node with two children (8):");
       tree.remove(8);
-      tree.remove(5);
-      tree.remove(7);
+      tree.printTree();
+      
+      System.out.println("\n\nRemove a node with one child (left child):");
       tree.remove(9);
-      tree.remove(3);
-      tree.remove(4);
-      tree.remove(2);
-      tree.printTreeSideWays();
-     
+      tree.printTree();
+      
+      System.out.println("\n\nRemove a leaf node (7):");
+      tree.remove(7);
+      tree.printTree();
+      
+      System.out.println("\n\nRemove a leaf node(0):");
+      tree.remove(0);
+      tree.printTree();
+      
+      System.out.println("\n\nRemove a node with one child (right child)");
+      tree.remove(1);
+      tree.printTree();
+      
+      System.out.println("\n\nRemove the root:");
+      tree.remove(6);
+      tree.printTree();
+      
+      System.out.println("\n\nClear the remaining tree and print it:");
+      tree.clear();
+      tree.printTree();
    }
 }
