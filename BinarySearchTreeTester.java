@@ -3,7 +3,7 @@ public class BinarySearchTreeTester{
       BinarySearchTree tree = new BinarySearchTree();
       int[] arr = {6,3,8,1,5,7,9,0,2,4};
       
-      //Add items to BST.
+      //Add values to BST.
       for(int i = 0; i < arr.length; i++){
          tree.add(arr[i]);
       }
@@ -16,6 +16,7 @@ public class BinarySearchTreeTester{
          System.out.println("Tree contains " +i +": " +tree.contains(i));
       }
       
+      //Check remove method functionality with different cases
       System.out.println("\nRemove a node with two children (8):");
       tree.remove(8);
       tree.printTree();
@@ -40,6 +41,7 @@ public class BinarySearchTreeTester{
       tree.remove(6);
       tree.printTree();
       
+      //Check clear method fucntionality
       System.out.println("\n\nClear the remaining tree and print it:");
       tree.clear();
       tree.printTree();
