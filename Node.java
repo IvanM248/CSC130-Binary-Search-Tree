@@ -50,7 +50,7 @@ public class Node {
       return this;
    }
    
-   //Removes smallest value node from the bst recursively.
+   //Removes smallest value node from the BST recursively.
    public Node removeMin() {
    
       if(this.left == null) {
