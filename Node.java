@@ -44,13 +44,12 @@ public class Node {
       }
       return this;
    }
-   
+
    //Removes smallest value node from the BST recursively.
    public Node removeMin() {
-   
       if(this.left == null) {
-         //Once min node is reached, return its right node as everything to
-         //the right of this node is greater than this node.
+         //Once min node is reached, return its right node to assign
+         //to the parent of the min node being deleted.
          return this.right;
       }
       else {
@@ -61,7 +60,6 @@ public class Node {
    
    //Recursively return the min value starting at a specified node
    public int getMinData() {
-   
       if(this.left == null) {
          return this.data;
       }
