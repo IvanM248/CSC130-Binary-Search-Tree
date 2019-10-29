@@ -37,8 +37,11 @@ public class Node {
          }
          //Case 3: removing a node with two children.
          else if(this.right != null && this.left != null) {
+            //Get data from min node.
             int minData = this.right.getMinData();
+            //Remove min node.
             this.right = this.right.removeMin();
+            //Swap data from current node to data from min node.
             this.data = minData;
          }
       }

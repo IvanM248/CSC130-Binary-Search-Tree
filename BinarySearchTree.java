@@ -18,7 +18,7 @@ public class BinarySearchTree {
          root = root.remove(value);
       }
    }
-      
+   
    public boolean contains(int value) {
       if(root != null) {
          return root.contains(value);

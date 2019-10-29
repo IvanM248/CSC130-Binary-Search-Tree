@@ -1,6 +1,6 @@
 //Ivan Medina
 //Assignment 3
-//CSC130S
+//CSC130
 public class BinarySearchTreeTester{
    public static void main(String[] args){
    
